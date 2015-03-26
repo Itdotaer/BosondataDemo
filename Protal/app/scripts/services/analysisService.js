@@ -33,8 +33,8 @@
             });
         }
 
-        function requestAnalysisUseAjax(text) {
-            return $.ajax({
+        function requestAnalysisUseAjax(text, cb) {
+            $.ajax({
                 type: 'POST',
                 url: baseUrl,
                 data: JSON.stringify(text),
@@ -49,11 +49,10 @@
                     request.setRequestHeader('X-Token', 'x1qhvxzi.2840.A2FFGgTwOPil');
                 },
                 success: function(data) {
-                    return data;
+                    return cb(null, data);
                 },
                 error: function(e) {
-                    logger.logError("出错!");
-                    return [];
+                    return cb("请求分析出错!");
                 }
             });
         }

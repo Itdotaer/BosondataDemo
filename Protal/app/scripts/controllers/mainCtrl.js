@@ -35,32 +35,35 @@
             if (vm.text == "" && vm.text != undefined) {
                 logger.logError('输入文本为空!');
             } else {
-                //Use ajax post
-                analysisService.requestAnalysisUseAjax(vm.text, function (data) {
-                    if (data.length > 0) {
+                //Use angular $http
+                analysisService.requestAnalysis(vm.text)
+                    .then(function (data) {
                         if (DEBUG) {
                             logger.logInfo('成功，词性分析成功!');
                         }
 
                         vm.data = data;
                         vm.isLoading = false;
-                    }
-                });
+                    })
+                    .catch(function (e) {
+                        vm.isLoading = false;
+                        logger.logError('请求分析出错!');
+                    });
 
-                //Use angular $http
-                //analysisService.requestAnalysis(vm.text)
-                //    .then(function (data) {
+                //Use ajax post
+                //analysisService.requestAnalysisUseAjax(vm.text, function (err, data) {
+                //    vm.isLoading = false;
+
+                //    if (err) {
+                //        logger.logError(err);
+                //    } else {
                 //        if (DEBUG) {
                 //            logger.logInfo('成功，词性分析成功!');
                 //        }
 
                 //        vm.data = data;
-                //        vm.isLoading = false;
-                //    })
-                //    .catch(function (e) {
-                //        vm.isLoading = false;
-                //        logger.logError('请求分析出错.');
-                //    });
+                //    }
+                //});
             }
 
             //Mock service

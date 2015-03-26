@@ -1,0 +1,113 @@
+﻿body {
+      font-family: "Microsoft Yahei",Tahoma,Helvetica,Arial,sans-serif;
+}
+.mainContent {
+    background-color: #f6f6f6;
+    position: relative;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    min-height: 296px;
+}
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -5px 0 0 -8px;
+    width: 16px;
+    height: 11px;
+    background-image: url(/app/images/loader.gif);
+}
+.words {
+    margin-top: 20px;
+    font-size: 0;
+}
+dl {
+    margin-bottom: 20px;
+    display: block;
+}
+dd {
+      display: inline-block;
+      padding: 0 11px;
+      height: 26px;
+      font-size: 14px;
+      line-height: 26px;
+      margin: 0 5px 5px 0;
+}
+.a {
+    background-color: #67ccaa;
+}
+.b {
+    
+}
+.c {
+    background-color: #8ea4de;
+}
+.d {
+    background-color: #ffcccb;
+}
+.e {
+    
+}
+.f {
+    background-color: #c9aaca;
+}
+.g {
+    
+}
+.h {
+    
+}
+.i {
+    
+}
+.j {
+    
+}
+.k {
+    
+}
+.l {
+    
+}
+.m {
+    background-color: #986699;
+}
+.n {
+    background-color: #488fce;
+}
+.o {
+    
+}
+.p {
+    background-color: #99cc67;
+}
+.q {
+    background-color: #ff9899;
+}
+.r {
+    background-color: #9acccd;
+}
+.s {
+    
+}
+.t {
+    background-color: #c7aee7;
+}
+.u {
+    background-color: #4dd9e6;
+}
+.v {
+    background-color: #ffcb99;
+}
+.w {
+    background-color: #ccc;
+}
+.x {
+    
+}
+.y {
+    background-color: #f48363;
+}
+.z {
+    
+}

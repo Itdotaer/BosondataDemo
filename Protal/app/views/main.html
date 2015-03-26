@@ -1,0 +1,26 @@
+﻿<!-- Main Content -->
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="form-group">
+                <textarea class="form-control" rows="5" ng-model="vm.text"></textarea>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row" style="padding-right: 10px;">
+                <button class="btn btn-primary" style="float: right;" ng-click="vm.requestAnalysis()">提交分析</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" style="padding-left: 10px;">
+        <h3>分析结果:</h3>
+        <div class="mainContent">
+            <dl class="words" ng-if="!vm.isLoading">
+                <dd ng-repeat="oneWord in vm.data[0].word track by $index" title="{{vm.identifyTagName(vm.data[0].tag[$index])}}" ng-class="vm.tagClass(vm.data[0].tag[$index])">{{oneWord}}</dd>
+            </dl>
+            <div class="loading" ng-if="vm.isLoading">
+            </div>
+        </div>
+    </div>
+</div>

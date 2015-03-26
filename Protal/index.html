@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app" ng-controller="appController as vm">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Harry Hu">
+    <meta name="gmail" content="hujiangtao1235@qq.com">
+    <meta name="github" content="https://github.com/SoftwareDreamer" />
+
+    <title>{{appName}} - Powered by Harry Hu</title>
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="/app/scripts/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/app/scripts/vendor/bootstrap/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/css/toastr.css" />
+    
+    <!-- Site's styles -->
+    <link rel="stylesheet" type="text/css" href="/app/styles/style.css"/>
+    
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+    <body>
+        <!-- Start Navigation -->
+        <div class="navbar navbar-default navbar-custom navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">{{appName}}</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a ui-sref="index">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Navigation -->
+
+        <div class="container" ui-view style="padding: 80px 0 80px 0;"></div>
+        
+        <!-- Start Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <ul class="list-inline text-center">
+                            <li>
+                                <a href="https://github.com/SoftwareDreamer/BosondataDemo">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="text-center text-muted">Copyright &copy; {{appName}} 2014</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+    
+        <!-- Start view related js files -->
+        <!--Inject JQuery-->
+        <script type="text/javascript" src="/app/scripts/vendor/jQuery/jquery-1.11.2.min.js"></script>
+
+        <!--Bootscript related js files-->
+        <script type="text/javascript" src="/app/scripts/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+        <!--Toastr-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.0/js/toastr.min.js"></script>
+        <!-- End view related js files -->
+
+        <!-- Start AngularJS Related Js Files -->
+        <!--Angular Core Scripts-->
+        <script type="text/javascript" src="/app/scripts/vendor/angularJS/angular.js"></script>
+        <script type="text/javascript" src="/app/scripts/vendor/angularJS/angular-ui-router.js"></script>
+
+        <!--Inject angular related js files-->
+        <script type="text/javascript" src="/app/scripts/app.js"></script>
+        <script type="text/javascript" src="/app/scripts/controllers/appCtrl.js"></script>
+        <script type="text/javascript" src="/app/scripts/controllers/mainCtrl.js"></script>
+
+        <!--Directives related-->
+        <!--Services related-->
+        <script type="text/javascript" src="/app/scripts/services/servicesModule.js"></script>
+        <script type="text/javascript" src="/app/scripts/services/logger.js"></script>
+        <script type="text/javascript" src="/app/scripts/services/analysisService.js"></script>
+        <!-- End AngularJS Related Js Files-->
+    </body>
+</html>

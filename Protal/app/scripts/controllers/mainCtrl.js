@@ -36,19 +36,19 @@
                 logger.logError('输入文本为空!');
             } else {
                 //Use angular $http
-                analysisService.requestAnalysis(vm.text)
-                    .then(function (data) {
-                        if (DEBUG) {
-                            logger.logInfo('成功，词性分析成功!');
-                        }
+                //analysisService.requestAnalysis(vm.text)
+                //    .then(function (data) {
+                //        if (DEBUG) {
+                //            logger.logInfo('成功，词性分析成功!');
+                //        }
 
-                        vm.data = data;
-                        vm.isLoading = false;
-                    })
-                    .catch(function (e) {
-                        vm.isLoading = false;
-                        logger.logError('请求分析出错!');
-                    });
+                //        vm.data = data;
+                //        vm.isLoading = false;
+                //    })
+                //    .catch(function (e) {
+                //        vm.isLoading = false;
+                //        logger.logError('请求分析出错!');
+                //    });
 
                 //Use ajax post
                 //analysisService.requestAnalysisUseAjax(vm.text, function (err, data) {
@@ -67,8 +67,8 @@
             }
 
             //Mock service
-            //vm.data = analysisService.mockRequestAnalysis();
-            //vm.isLoading = false;
+            vm.data = analysisService.mockRequestAnalysis();
+            vm.isLoading = false;
         }
 
         //词性标注是按照已有页面匹配，数据不全，如有不准，仅供参考。

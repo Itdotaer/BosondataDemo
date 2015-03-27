@@ -32,6 +32,7 @@
 
         function requestAnalysis() {
             vm.isLoading = true;
+            vm.data = [];
 
             if (vm.text == "" && vm.text != undefined) {
                 logger.logError('输入文本为空!');
